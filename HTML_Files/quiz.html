@@ -14,8 +14,27 @@
     </head>
 
     <body>
-        
-        <button id="start-button" class="btn-start">Start Quiz</button>
+        <div>
+            <div class="score">
+                a
+            </div>
+            <div class="btn-start">
+                <button class="btn btn-warning btn-lg">Start Quiz</button>
+            </div>
+        </div>
+        <div class="card quiz-box">
+            <header class="card-header">
+                <div class="title">Quiz App</div>
+            </header>
+            <section class="card-body">
+                <div class="question-text"></div>
+                <div class="option-list"></div>
+            </section>
+            <footer class="card-footer">
+                <div class="question-index"></div>
+                <button class="next-btn btn btn-primary btn-sm float-end">Next Question</button>
+            </footer>
+        </div>
 
         <script src="../JavaScript_Files/quiz.js"></script>
     </body>
