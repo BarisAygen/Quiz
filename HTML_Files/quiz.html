@@ -3,28 +3,27 @@
 <html lang="en">
 
     <head>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../CSS_Files/quiz.css">
+        <link rel="stylesheet" href="../CSS_Files/style.css">
         <title>Quiz Main Page</title>
-
     </head>
 
     <body>
-        <div>
-            <div class="score">
-                a
-            </div>
-            <div class="btn-start">
-                <button class="btn btn-warning btn-lg">Start Quiz</button>
-            </div>
+        <div class="btn-start">
+            <button class="btn btn-warning btn-lg">Start Quiz</button>
         </div>
+
         <div class="card quiz-box">
             <header class="card-header">
                 <div class="title">Quiz App</div>
+                <div class="timer">
+                    <div class="time-next">Time left</div>
+                    <div class="time-second"></div>
+                    <div class="time-line"></div>
+                </div>
             </header>
             <section class="card-body">
                 <div class="question-text"></div>
@@ -32,11 +31,24 @@
             </section>
             <footer class="card-footer">
                 <div class="question-index"></div>
-                <button class="next-btn btn btn-primary btn-sm float-end">Next Question</button>
+                <button class="end-btn next-btn btn btn-primary btn-sm float-end">Next Question</button>
             </footer>
         </div>
 
+        <div class="card score-box">
+            <div class="icon"><i class="fas fa-crown"></i></div>
+            <div class="score-text"></div>
+            <div class="buttons">
+                <button class="btn btn-primary btn-replay">Replay</button>
+                <button class="btn btn-primary btn-quit">Quit</button>
+            </div>
+
+        </div>
+
+        <script src="../JavaScript_Files/utility.js"></script>
+        <script src="../JavaScript_Files/questions.js"></script>
         <script src="../JavaScript_Files/quiz.js"></script>
+        <script src="../JavaScript_Files/main.js"></script>
     </body>
 
 </html>

@@ -1,8 +1,8 @@
-.btn-start, .quiz-box {
+.btn-start, .quiz-box, .score-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .quiz-box {
@@ -78,8 +78,74 @@
     transform: scale(1);
 }
 
+.quiz-box header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.quiz-box header .time-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: #f0a500;
+}
+
+.quiz-box .timer {
+    display: flex;
+    background-color: #143f68;
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 15px;
+    align-items: center;
+}
+
+.quiz-box header .timer .time-next {
+    font-size: 14px;
+}
+
+.quiz-box header .timer .time-second {
+    background-color: #f0a500;
+    border-radius: 3px;
+    margin-left: 3px;
+    width: 25px;
+    text-align: center;
+}
+
 .quiz-box footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.score-box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.score-box {
+    width: 550px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.score-box .icon {
+    font-size: 90px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.score-box .score-test {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
